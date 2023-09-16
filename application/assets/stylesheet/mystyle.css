@@ -1,0 +1,32 @@
+form {
+    height: 500px;
+    width: 300px;
+    vertical-align: top;
+    display: inline-block;
+    background-color: #eee;
+}
+
+.result {
+    width: 800px;
+    display: inline-block;
+    background-color: #ddd;
+}
+    section {
+        border: 1px solid black;
+        display: inline-block;
+        margin: 10px 20px;
+    }
+        h1 {
+            font-size: 15px;
+            text-align: center;
+        }
+
+label {
+    display: block;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+

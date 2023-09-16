@@ -1,0 +1,18 @@
+GET http://localhost:8888/home
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+GET http://localhost:8888/
+Content-Type: application/x-www-form-urlencoded
+
+###
+
+POST http://localhost:8888/register
+Content-Type: application/x-www-form-urlencoded
+
+first_name=sasdf asdf
+&last_name=aasdf asdf
+&email=ema3@email.com
+&password=passwords
+&c_password=passwords

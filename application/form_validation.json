@@ -1,0 +1,45 @@
+[
+    {
+        "login": [
+            [
+                {"field": "email"},
+                {"label": "Email"},
+                {"rules": "required|email"}
+            ],
+            [
+                {"field": "password"},
+                {"label": "Password"},
+                {"rules": "required"}
+            ]
+        ]
+    },
+    {
+        "register": [
+            [
+                {"field": "first_name"},
+                {"label": "First Name"},
+                {"rules": "required|min(5)|alpha_space"}
+            ],
+            [
+                {"field": "last_name"},
+                {"label": "Last Name"},
+                {"rules": "required|min(5)|alpha_space"}
+            ],
+            [
+                {"field": "email"},
+                {"label": "Email Address"},
+                {"rules": "required|email"}
+            ],
+            [
+                {"field": "password"},
+                {"label": "Password"},
+                {"rules": "required|min(8)"}
+            ],
+            [
+                {"field": "c_password"},
+                {"label": "Confirm Password"},
+                {"rules": "required|matches(password)"}
+            ]
+        ]
+    }
+]

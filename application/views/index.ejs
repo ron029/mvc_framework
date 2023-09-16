@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX: Sports Players</title>
+    <link rel="stylesheet" href="/stylesheet/mystyle.css">
+    <script src="../javascript/jquery.js"></script>
+    <script src="../javascript/myscript.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#form1').on('submit', function() {
+                $.post($(this).attr('action'), $(this).serialize(), function(data) {
+                    $('.result').html(data);
+                });
+                return false;
+            });
+            $(document).on('change keyup', 'input[type="checkbox"],input[type="text"]', function(){
+                $.post($(this).attr('action'), $(this).serialize(), function(data) {
+                    $('.result').html(data);
+                });
+                return false;
+            });
+            $('#form1').submit();
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="form1" class="search_panel" method="post" action="/filter">
+            <label>
+                <p>Search Users</p>
+                <input type="text" placeholder="name" name="name">
+            </label>
+            <label>
+                <input type="checkbox" value="female" name="gender[]">
+                Female
+            </label>
+            <label>
+                <input type="checkbox" value="Male" name="gender[]">
+                Male
+            </label>
+            <p>Sports</p>
+            <label>
+                <input type="checkbox" value="basketball" name="sports[]">
+                Basketball
+            </label>
+            <label>
+                <input type="checkbox" value="volleyball" name="sports[]">
+                Volleyball
+            </label>
+            <label>
+                <input type="checkbox" value="baseball" name="sports[]">
+                Baseball
+            </label>
+            <label>
+                <input type="checkbox" value="soccer" name="sports[]">
+                Soccer
+            </label>
+            <label>
+                <input type="checkbox" value="football" name="sports[]">
+                Football
+            </label>
+        </form>
+        <div class="result"></div>
+    </div>
+</body>
+</html>
